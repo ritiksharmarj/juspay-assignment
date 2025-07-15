@@ -19,6 +19,7 @@ import {
   CollapsibleTrigger,
   useCollapsible,
 } from "./collapsible";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./tabs";
 
 const dashboardsData = [
   {
@@ -276,17 +277,47 @@ function CollapsibleSidebarItem({ navItem }) {
 
 export function SidebarLeft() {
   return (
-    <div className="relative flex size-full flex-col gap-4 py-5">
-      <div className="px-4">
+    <div className="relative flex size-full h-dvh flex-col gap-4 border-foreground/10 border-r">
+      <div className="px-4 pt-5">
         <div className="flex h-8 cursor-pointer items-center gap-2 rounded-lg p-1 text-sm transition-colors hover:bg-foreground/5">
           <img src={ByeWind} alt="avatar" className="size-6 rounded-full" />
           ByeWind
         </div>
       </div>
 
-      <div></div>
+      <div className="px-4">
+        <Tabs defaultValue="favorites">
+          <TabsList>
+            <TabsTrigger value="favorites">Favorites</TabsTrigger>
+            <TabsTrigger value="recently">Recently</TabsTrigger>
+          </TabsList>
+          <TabsContent
+            value="favorites"
+            className="flex flex-col gap-1 text-sm"
+          >
+            <div className="flex h-7 items-center rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
+              <div className="mr-[9px] size-1.5 rounded-full bg-foreground/20" />
+              Overview
+            </div>
+            <div className="flex h-7 items-center rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
+              <div className="mr-[9px] size-1.5 rounded-full bg-foreground/20" />
+              Projects
+            </div>
+          </TabsContent>
+          <TabsContent value="recently" className="flex flex-col gap-1 text-sm">
+            <div className="flex h-7 items-center rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
+              <div className="mr-[9px] size-1.5 rounded-full bg-foreground/20" />
+              eCommerce
+            </div>
+            <div className="flex h-7 items-center rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
+              <div className="mr-[9px] size-1.5 rounded-full bg-foreground/20" />
+              Documents
+            </div>
+          </TabsContent>
+        </Tabs>
+      </div>
 
-      <div className="flex flex-1 flex-col gap-4 overflow-y-auto px-4">
+      <div className="flex flex-1 flex-col gap-4 overflow-y-auto px-4 pb-5">
         <div className="flex flex-col gap-1">
           <div className="flex h-7 items-center px-3 py-1 text-foreground/40 text-sm">
             Dashboards
