@@ -4,16 +4,16 @@
       "id": 1,
       "user": {
         "name": "User 1",
-        "avatar": "/assets/images/avatars/user-1.png"
+        "avatar": "/src/assets/images/avatars/user-1.png"
       },
-      "action": "You have a bug that needs...",
+      "action": "You have a bug that needs to be fixed.",
       "timestamp": "Just now"
     },
     {
       "id": 2,
       "user": {
         "name": "User 2",
-        "avatar": "/assets/images/avatars/user-2.png"
+        "avatar": "/src/assets/images/avatars/user-2.png"
       },
       "action": "Released a new version",
       "timestamp": "59 minutes ago"
@@ -22,7 +22,7 @@
       "id": 3,
       "user": {
         "name": "User 3",
-        "avatar": "/assets/images/avatars/user-3.png"
+        "avatar": "/src/assets/images/avatars/user-3.png"
       },
       "action": "Submitted a bug",
       "timestamp": "12 hours ago"
@@ -31,7 +31,7 @@
       "id": 4,
       "user": {
         "name": "User 4",
-        "avatar": "/assets/images/avatars/user-4.png"
+        "avatar": "/src/assets/images/avatars/user-4.png"
       },
       "action": "Modified A data in Page X",
       "timestamp": "Today, 11:59 AM"
@@ -40,7 +40,7 @@
       "id": 5,
       "user": {
         "name": "User 5",
-        "avatar": "/assets/images/avatars/user-5.png"
+        "avatar": "/src/assets/images/avatars/user-5.png"
       },
       "action": "Deleted a page in Project X",
       "timestamp": "Feb 2, 2023"
@@ -50,62 +50,58 @@
     {
       "id": 1,
       "name": "Natali Craig",
-      "avatar": "/assets/images/contacts/natali-craig.png"
+      "avatar": "/src/assets/images/contacts/natali-craig.png"
     },
     {
       "id": 2,
       "name": "Drew Cano",
-      "avatar": "/assets/images/contacts/drew-cano.png"
+      "avatar": "/src/assets/images/contacts/drew-cano.png"
     },
     {
       "id": 3,
       "name": "Orlando Diggs",
-      "avatar": "/assets/images/contacts/orlando-diggs.png"
+      "avatar": "/src/assets/images/contacts/orlando-diggs.png"
     },
     {
       "id": 4,
       "name": "Andi Lane",
-      "avatar": "/assets/images/contacts/andi-lane.png"
+      "avatar": "/src/assets/images/contacts/andi-lane.png"
     },
     {
       "id": 5,
       "name": "Kate Morrison",
-      "avatar": "/assets/images/contacts/kate-morrison.png"
+      "avatar": "/src/assets/images/contacts/kate-morrison.png"
     },
     {
       "id": 6,
       "name": "Koray Okumus",
-      "avatar": "/assets/images/contacts/koray-okumus.png"
+      "avatar": "/src/assets/images/contacts/koray-okumus.png"
     }
   ],
   "notifications": [
     {
       "id": 1,
-      "message": "You have a bug that needs...",
+      "message": "You have a bug that needs to be fixed.",
       "timestamp": "Just now",
-      "type": "bug",
-      "priority": "high"
+      "type": "bug"
     },
     {
       "id": 2,
       "message": "New user registered",
       "timestamp": "59 minutes ago",
-      "type": "user",
-      "priority": "medium"
+      "type": "user"
     },
     {
       "id": 3,
-      "message": "You have a bug that needs...",
+      "message": "You have a bug that needs to be fixed.",
       "timestamp": "12 hours ago",
-      "type": "bug",
-      "priority": "high"
+      "type": "bug"
     },
     {
       "id": 4,
       "message": "Andi Lane subscribed to you",
       "timestamp": "Today, 11:59 AM",
-      "type": "broadcast",
-      "priority": "low"
+      "type": "broadcast"
     }
   ]
 }
