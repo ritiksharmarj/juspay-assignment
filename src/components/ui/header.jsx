@@ -4,8 +4,8 @@ import {
   SearchIcon,
   SidebarIcon,
   StarIcon,
-  SunIcon,
 } from "../icons";
+import { ToggleTheme } from "../toggle-theme";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -53,9 +53,7 @@ export function Header({ toggleSidebarLeft, toggleSidebarRight }) {
         />
 
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon">
-            <SunIcon />
-          </Button>
+          <ToggleTheme />
           <Button variant="ghost" size="icon">
             <ClockCounterClockwiseIcon />
           </Button>

@@ -9,6 +9,7 @@ export { default as ClockCounterClockwiseIcon } from "./clock-counter-clockwise"
 export { default as FolderNotchIcon } from "./folder-notch";
 export { default as IdentificationBadgeIcon } from "./identification-badge";
 export { default as IdentificationCardIcon } from "./identification-card";
+export { default as MoonIcon } from "./moon";
 export { default as NotebookIcon } from "./Notebook";
 export { default as SearchIcon } from "./Search";
 export { default as ShoppingBagOpenIcon } from "./shopping-bag-open";
