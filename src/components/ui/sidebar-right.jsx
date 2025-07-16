@@ -17,11 +17,16 @@ const notificationConfig = {
   },
 };
 
-export function SidebarRight() {
+export function SidebarRight({ isSidebarRightOpen }) {
   return (
-    <div className="relative flex size-full h-dvh flex-col gap-6 overflow-y-auto border-foreground/10 border-l px-5">
+    <div
+      className={cn(
+        "relative flex h-dvh w-[280px] flex-col gap-6 overflow-y-auto overflow-x-hidden border-foreground/10 border-l transition-[width] duration-300 ease-in-out",
+        isSidebarRightOpen && "w-0",
+      )}
+    >
       {/* Notifications */}
-      <div className="flex flex-col gap-2 pt-5">
+      <div className="flex flex-col gap-2 px-5 pt-5">
         <div className="px-1 py-2 font-semibold text-sm">Notifications</div>
 
         <div className="flex flex-col gap-2">
@@ -42,7 +47,7 @@ export function SidebarRight() {
                   <Icon className="size-4 shrink-0" />
                 </div>
 
-                <div className="overflow-hidden text-sm">
+                <div className="overflow-hidden whitespace-nowrap text-sm">
                   <p className="truncate">{notification.message}</p>
                   <p className="text-foreground/40 text-xs">
                     {notification.timestamp}
@@ -55,7 +60,7 @@ export function SidebarRight() {
       </div>
 
       {/* Activities */}
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 px-5">
         <div className="px-1 py-2 font-semibold text-sm">Activities</div>
 
         <div className="flex flex-col gap-2">
@@ -71,7 +76,7 @@ export function SidebarRight() {
                 className="relative z-10 size-6 shrink-0 rounded-full object-cover"
               />
 
-              <div className="overflow-hidden text-sm">
+              <div className="overflow-hidden whitespace-nowrap text-sm">
                 <p className="truncate">{activity.action}</p>
                 <p className="text-foreground/40 text-xs">
                   {activity.timestamp}
@@ -83,7 +88,7 @@ export function SidebarRight() {
       </div>
 
       {/* Contacts */}
-      <div className="flex flex-col gap-2 pb-5">
+      <div className="flex flex-col gap-2 px-5 pb-5">
         <div className="px-1 py-2 font-semibold text-sm">Contacts</div>
 
         <div className="flex flex-col gap-2">
@@ -98,7 +103,7 @@ export function SidebarRight() {
                 className="size-6 shrink-0 rounded-full object-cover"
               />
 
-              <span>{contact.name}</span>
+              <span className="whitespace-nowrap">{contact.name}</span>
             </div>
           ))}
         </div>

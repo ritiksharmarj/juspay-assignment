@@ -17,12 +17,12 @@ import {
 import { Button } from "./button";
 import { Input } from "./input";
 
-export function Header() {
+export function Header({ toggleSidebarLeft, toggleSidebarRight }) {
   return (
-    <div className="flex h-17 items-center border-foreground/10 border-b px-7">
+    <header className="sticky top-0 flex h-17 shrink-0 items-center border-foreground/10 border-b px-7">
       <div className="flex items-center gap-2">
         <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" onClick={toggleSidebarLeft}>
             <SidebarIcon />
           </Button>
           <Button variant="ghost" size="icon">
@@ -62,11 +62,11 @@ export function Header() {
           <Button variant="ghost" size="icon">
             <BellIcon />
           </Button>
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" onClick={toggleSidebarRight}>
             <SidebarIcon />
           </Button>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

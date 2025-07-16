@@ -198,7 +198,7 @@ function SidebarSubMenuItem({ subNavItem, ...props }) {
     <NavLink
       to={subNavItem.route}
       className={cn(
-        "relative flex h-7 cursor-pointer items-center gap-1 rounded-lg py-1 pr-2 pl-13 text-sm transition-colors hover:bg-foreground/5",
+        "relative flex h-7 cursor-pointer items-center gap-1 whitespace-nowrap rounded-lg py-1 pr-2 pl-13 text-sm transition-colors hover:bg-foreground/5",
       )}
       {...props}
     >
@@ -245,7 +245,7 @@ function SidebarItem({
         )}
       />
 
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1 whitespace-nowrap">
         <navItem.icon className="size-5 shrink-0" />
         <span className="text-sm">{navItem.title}</span>
       </div>
@@ -275,12 +275,21 @@ function CollapsibleSidebarItem({ navItem }) {
   );
 }
 
-export function SidebarLeft() {
+export function SidebarLeft({ isSidebarLeftOpen }) {
   return (
-    <div className="relative flex size-full h-dvh flex-col gap-4 border-foreground/10 border-r">
+    <div
+      className={cn(
+        "relative flex h-dvh w-[212px] flex-col gap-4 overflow-hidden border-foreground/10 border-r transition-[width] duration-300 ease-in-out",
+        isSidebarLeftOpen && "w-0",
+      )}
+    >
       <div className="px-4 pt-5">
-        <div className="flex h-8 cursor-pointer items-center gap-2 rounded-lg p-1 text-sm transition-colors hover:bg-foreground/5">
-          <img src={ByeWind} alt="avatar" className="size-6 rounded-full" />
+        <div className="flex h-8 cursor-pointer items-center gap-2 whitespace-nowrap rounded-lg p-1 text-sm transition-colors hover:bg-foreground/5">
+          <img
+            src={ByeWind}
+            alt="avatar"
+            className="size-6 shrink-0 rounded-full"
+          />
           ByeWind
         </div>
       </div>
@@ -295,22 +304,22 @@ export function SidebarLeft() {
             value="favorites"
             className="flex flex-col gap-1 text-sm"
           >
-            <div className="flex h-7 items-center rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
-              <div className="mr-[9px] size-1.5 rounded-full bg-foreground/20" />
+            <div className="flex h-7 items-center whitespace-nowrap rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
+              <div className="mr-[9px] size-1.5 shrink-0 rounded-full bg-foreground/20" />
               Overview
             </div>
-            <div className="flex h-7 items-center rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
-              <div className="mr-[9px] size-1.5 rounded-full bg-foreground/20" />
+            <div className="flex h-7 items-center whitespace-nowrap rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
+              <div className="mr-[9px] size-1.5 shrink-0 rounded-full bg-foreground/20" />
               Projects
             </div>
           </TabsContent>
           <TabsContent value="recently" className="flex flex-col gap-1 text-sm">
-            <div className="flex h-7 items-center rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
-              <div className="mr-[9px] size-1.5 rounded-full bg-foreground/20" />
+            <div className="flex h-7 items-center whitespace-nowrap rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
+              <div className="mr-[9px] size-1.5 shrink-0 rounded-full bg-foreground/20" />
               eCommerce
             </div>
-            <div className="flex h-7 items-center rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
-              <div className="mr-[9px] size-1.5 rounded-full bg-foreground/20" />
+            <div className="flex h-7 items-center whitespace-nowrap rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
+              <div className="mr-[9px] size-1.5 shrink-0 rounded-full bg-foreground/20" />
               Documents
             </div>
           </TabsContent>
