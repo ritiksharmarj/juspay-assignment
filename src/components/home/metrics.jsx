@@ -51,7 +51,7 @@ export function Metrics() {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setCurrentMetrics(metrics);
-    }, 300);
+    }, 150);
 
     return () => clearTimeout(timer);
   }, []);

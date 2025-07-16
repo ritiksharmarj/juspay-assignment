@@ -1,4 +1,5 @@
 import { Metrics } from "@/components/home/metrics";
+import { ProjectionsActuals } from "@/components/home/projections-actuals";
 
 export default function HomePage() {
   return (
@@ -7,6 +8,7 @@ export default function HomePage() {
 
       <div className="grid grid-cols-4 gap-7">
         <Metrics />
+        <ProjectionsActuals />
       </div>
     </div>
   );

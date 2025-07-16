@@ -23,6 +23,9 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
+  --color-bar-chart-1: var(--bar-chart-1);
+  --color-bar-chart-2: var(--bar-chart-2);
 }
 /* --color-chart-1: var(--chart-1);
 --color-chart-2: var(--chart-2);
@@ -53,6 +56,9 @@
   --border: hsl(0, 0%, 11%);
   --input: hsl(0, 0%, 11%);
   --ring: hsl(0, 0%, 11%);
+
+  --bar-chart-1: hsl(205, 40%, 76%);
+  --bar-chart-2: hsla(204, 40%, 76%, 0.5);
 }
 
 .dark {
@@ -70,6 +76,9 @@
   --border: hsl(0, 0%, 100%);
   --input: hsl(0, 0%, 100%);
   --ring: hsl(0, 0%, 100%);
+
+  --bar-chart-1: hsl(205, 40%, 76%);
+  --bar-chart-2: hsla(204, 40%, 76%, 0.5);
 }
 
 @layer base {
