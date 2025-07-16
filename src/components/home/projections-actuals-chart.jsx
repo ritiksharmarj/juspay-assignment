@@ -4,8 +4,8 @@ import { ChartContainer, ChartTooltip, ChartTooltipContent } from "../ui/chart";
 const chartData = [
   { month: "Jan", actuals: 16000000, projections: 4000000 },
   { month: "Feb", actuals: 20000000, projections: 5000000 },
-  { month: "Mar", actuals: 17000000, projections: 4000000 },
-  { month: "Apr", actuals: 22000000, projections: 6000000 },
+  { month: "Mar", actuals: 18000000, projections: 4000000 },
+  { month: "Apr", actuals: 24000000, projections: 6000000 },
   { month: "May", actuals: 14000000, projections: 4000000 },
   { month: "Jun", actuals: 20000000, projections: 5000000 },
 ];
@@ -21,7 +21,7 @@ const chartConfig = {
   },
 };
 
-export function ProjectionsActuals() {
+export function ProjectionsActualsChart() {
   return (
     <div className="col-span-2 flex flex-col gap-4 rounded-2xl bg-primary-light p-6">
       <p className="font-semibold text-sm">Projections vs Actuals</p>
@@ -31,7 +31,7 @@ export function ProjectionsActuals() {
           accessibilityLayer
           data={chartData}
           barSize={20}
-          margin={{ top: 5, right: -5, left: -5, bottom: -5 }}
+          margin={{ top: 5, right: 0, left: -15, bottom: -5 }}
         >
           <CartesianGrid vertical={false} />
           <XAxis

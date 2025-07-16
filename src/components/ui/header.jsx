@@ -19,7 +19,7 @@ import { Input } from "./input";
 
 export function Header({ toggleSidebarLeft, toggleSidebarRight }) {
   return (
-    <header className="sticky top-0 flex h-17 shrink-0 items-center border-foreground/10 border-b px-7">
+    <header className="sticky top-0 z-20 flex h-17 shrink-0 items-center border-foreground/10 border-b bg-background px-7">
       <div className="flex items-center gap-2">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" onClick={toggleSidebarLeft}>

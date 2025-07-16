@@ -26,6 +26,8 @@
 
   --color-bar-chart-1: var(--bar-chart-1);
   --color-bar-chart-2: var(--bar-chart-2);
+  --color-area-chart-1: var(--area-chart-1);
+  --color-area-chart-2: var(--area-chart-2);
 }
 /* --color-chart-1: var(--chart-1);
 --color-chart-2: var(--chart-2);
@@ -59,6 +61,8 @@
 
   --bar-chart-1: hsl(205, 40%, 76%);
   --bar-chart-2: hsla(204, 40%, 76%, 0.5);
+  --area-chart-1: hsl(0, 0%, 11%);
+  --area-chart-2: hsl(205, 40%, 76%);
 }
 
 .dark {
@@ -79,6 +83,8 @@
 
   --bar-chart-1: hsl(205, 40%, 76%);
   --bar-chart-2: hsla(204, 40%, 76%, 0.5);
+  --area-chart-1: hsl(239, 78%, 87%);
+  --area-chart-2: hsl(205, 40%, 76%);
 }
 
 @layer base {

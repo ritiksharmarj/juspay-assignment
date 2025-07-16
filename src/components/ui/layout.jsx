@@ -22,7 +22,7 @@ export function Layout() {
     <div className="flex min-h-dvh w-full">
       <SidebarLeft isSidebarLeftOpen={isSidebarLeftOpen} />
 
-      <main className="relative flex w-full flex-1 flex-col">
+      <main className="relative flex h-dvh w-full flex-1 flex-col overflow-y-auto">
         <Header
           toggleSidebarLeft={toggleSidebarLeft}
           toggleSidebarRight={toggleSidebarRight}
