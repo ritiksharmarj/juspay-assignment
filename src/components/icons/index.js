@@ -1,4 +1,6 @@
+export { default as ArrowFallIcon } from "./arrow-fall";
 export { default as ArrowLineRightIcon } from "./arrow-line-right";
+export { default as ArrowRiseIcon } from "./arrow-rise";
 export { default as BellIcon } from "./bell";
 export { default as BookOpenIcon } from "./book-open";
 export { default as BroadcastIcon } from "./broadcast";
