@@ -39,8 +39,8 @@
 --color-sidebar-ring: var(--sidebar-ring); */
 
 :root {
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(0, 0%, 11%);
+  --background: hsl(0, 0%, 100%); /* white */
+  --foreground: hsl(0, 0%, 11%); /* black */
   --primary-brand: hsl(0, 0%, 11%);
   --primary-light: hsl(210, 33%, 98%);
   --primary-blue: hsl(201, 100%, 95%);
@@ -74,7 +74,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/20;
   }
 
   html {
