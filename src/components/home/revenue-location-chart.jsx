@@ -49,7 +49,7 @@ export function RevenueLocationChart() {
   };
 
   return (
-    <div className="col-span-full flex flex-col gap-4 rounded-2xl bg-primary-light p-6 md:col-span-1">
+    <div className="flex flex-col gap-4 rounded-2xl bg-primary-light p-6 max-lg:row-span-1 max-lg:row-start-4 lg:col-span-1">
       <p className="font-semibold text-sm">Revenue by Location</p>
 
       <MapComp locations={locationData} />

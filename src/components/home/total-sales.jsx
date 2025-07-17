@@ -47,13 +47,13 @@ export function TotalSales() {
     }).format(value);
 
   return (
-    <div className="col-span-full flex flex-col gap-4 rounded-2xl bg-primary-light p-6 md:col-span-1">
+    <div className="flex flex-col gap-4 rounded-2xl bg-primary-light p-6 max-lg:row-span-1 max-lg:row-start-4 lg:col-span-1">
       <p className="font-semibold text-sm">Total Sales</p>
 
       <div className="w-full">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-30"
+          className="mx-auto aspect-square max-w-46 lg:max-h-30"
         >
           <PieChart>
             <ChartTooltip
@@ -84,7 +84,7 @@ export function TotalSales() {
 
       <div className="flex flex-col gap-3 text-sm">
         {chartData.map((item) => (
-          <div key={item.channel} className="flex items-center px-2.5 py-0.5">
+          <div key={item.channel} className="flex items-center py-0.5">
             <div className="flex flex-1 items-center gap-1.5">
               <div
                 className="size-1.5 shrink-0 rounded-full"

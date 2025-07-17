@@ -23,7 +23,7 @@ const chartConfig = {
 
 export function ProjectionsActualsChart() {
   return (
-    <div className="col-span-full flex flex-col gap-4 rounded-2xl bg-primary-light p-6 md:col-span-2">
+    <div className="col-span-full flex flex-col gap-4 rounded-2xl bg-primary-light p-6 lg:col-span-2">
       <p className="font-semibold text-sm">Projections vs Actuals</p>
 
       <ChartContainer config={chartConfig} className="h-[168px] w-full">

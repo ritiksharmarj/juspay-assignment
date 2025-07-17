@@ -14,11 +14,12 @@ export function Sidebar({
   toggleSidebar,
   sidebarWidthDesktop = "256px",
   sidebarWidthMobile = "288px",
+  mobileBreakpoint = 768,
   className,
   children,
   ...props
 }) {
-  const isMobile = useIsMobile();
+  const isMobile = useIsMobile(mobileBreakpoint);
 
   if (isMobile) {
     return (

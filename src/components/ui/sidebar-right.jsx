@@ -25,6 +25,7 @@ export function SidebarRight({ isCollapsible, toggleSidebar }) {
       isCollapsible={isCollapsible}
       sidebarWidthDesktop="280px"
       toggleSidebar={toggleSidebar}
+      mobileBreakpoint={1280}
     >
       <div className="flex flex-col gap-6 overflow-y-auto">
         {/* Notifications */}

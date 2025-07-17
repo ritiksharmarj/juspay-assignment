@@ -30,7 +30,7 @@ export function Header({ toggleSidebarLeft, toggleSidebarRight }) {
           </Button>
         </div>
 
-        <Breadcrumb className="max-sm:hidden">
+        <Breadcrumb className="max-md:hidden">
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink>Dashboards</BreadcrumbLink>
@@ -57,7 +57,7 @@ export function Header({ toggleSidebarLeft, toggleSidebarRight }) {
           <Button variant="ghost" size="icon" className="max-sm:hidden">
             <ClockCounterClockwiseIcon />
           </Button>
-          <Button variant="ghost" size="icon" className="max-sm:hidden">
+          <Button variant="ghost" size="icon">
             <BellIcon />
           </Button>
           <Button variant="ghost" size="icon" onClick={toggleSidebarRight}>

@@ -21,7 +21,7 @@ export function Layout() {
   return (
     <div className="flex min-h-dvh w-full">
       <SidebarLeft
-        isSidebarLeftOpen={collapsedLeft}
+        isCollapsible={collapsedLeft}
         toggleSidebar={toggleSidebarLeft}
       />
 
@@ -34,7 +34,7 @@ export function Layout() {
       </main>
 
       <SidebarRight
-        isSidebarRightOpen={collapsedRight}
+        isCollapsible={collapsedRight}
         toggleSidebar={toggleSidebarRight}
       />
     </div>
