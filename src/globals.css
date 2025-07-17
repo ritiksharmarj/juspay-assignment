@@ -28,20 +28,11 @@
   --color-bar-chart-2: var(--bar-chart-2);
   --color-area-chart-1: var(--area-chart-1);
   --color-area-chart-2: var(--area-chart-2);
+  --color-pie-chart-1: var(--pie-chart-1);
+  --color-pie-chart-2: var(--pie-chart-2);
+  --color-pie-chart-3: var(--pie-chart-3);
+  --color-pie-chart-4: var(--pie-chart-4);
 }
-/* --color-chart-1: var(--chart-1);
---color-chart-2: var(--chart-2);
---color-chart-3: var(--chart-3);
---color-chart-4: var(--chart-4);
---color-chart-5: var(--chart-5);
---color-sidebar: var(--sidebar);
---color-sidebar-foreground: var(--sidebar-foreground);
---color-sidebar-primary: var(--sidebar-primary);
---color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
---color-sidebar-accent: var(--sidebar-accent);
---color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
---color-sidebar-border: var(--sidebar-border);
---color-sidebar-ring: var(--sidebar-ring); */
 
 :root {
   --background: hsl(0, 0%, 100%); /* white */
@@ -63,6 +54,10 @@
   --bar-chart-2: hsla(204, 40%, 76%, 0.5);
   --area-chart-1: hsl(0, 0%, 11%);
   --area-chart-2: hsl(205, 40%, 76%);
+  --pie-chart-1: hsl(0, 0%, 11%);
+  --pie-chart-2: hsl(124, 59%, 83%);
+  --pie-chart-3: hsl(231, 94%, 79%);
+  --pie-chart-4: hsl(202, 100%, 85%);
 }
 
 .dark {
@@ -85,6 +80,10 @@
   --bar-chart-2: hsla(204, 40%, 76%, 0.5);
   --area-chart-1: hsl(239, 78%, 87%);
   --area-chart-2: hsl(205, 40%, 76%);
+  --pie-chart-1: hsl(239, 78%, 87%);
+  --pie-chart-2: hsl(124, 59%, 83%);
+  --pie-chart-3: hsl(231, 94%, 79%);
+  --pie-chart-4: hsl(202, 100%, 85%);
 }
 
 @layer base {
