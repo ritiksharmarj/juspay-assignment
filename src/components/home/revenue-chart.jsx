@@ -24,9 +24,9 @@ const chartConfig = {
 export function RevenueChart() {
   return (
     <div className="col-span-full flex flex-col gap-4 rounded-2xl bg-primary-light p-6 lg:col-span-3">
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col items-start gap-4 md:flex-row md:items-center">
         <p className="font-semibold text-sm">Revenue</p>
-        <div className="h-4 w-px bg-foreground/20" />
+        <div className="h-4 w-px bg-foreground/20 max-md:hidden" />
         <div className="flex items-center gap-1.5">
           <div className="size-1.5 shrink-0 rounded-full bg-primary-brand" />
           <div className="text-xs">
@@ -45,7 +45,7 @@ export function RevenueChart() {
         <AreaChart
           accessibilityLayer
           data={chartData}
-          margin={{ top: 15, right: 0, left: -15, bottom: -5 }}
+          margin={{ top: 15, right: 15, left: -15, bottom: -5 }}
         >
           <CartesianGrid vertical={false} />
           <XAxis
