@@ -5,6 +5,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { formatCurrency } from "@/lib/utils";
 
 const chartData = [
   { channel: "Direct", sales: 300.56, fill: "var(--pie-chart-1)" },
@@ -39,12 +40,6 @@ export function TotalSales() {
   const totalSales = React.useMemo(() => {
     return chartData.reduce((acc, curr) => acc + curr.sales, 0);
   }, []);
-
-  const formatCurrency = (value) =>
-    new Intl.NumberFormat("en-US", {
-      style: "currency",
-      currency: "USD",
-    }).format(value);
 
   return (
     <div className="flex flex-col gap-4 rounded-2xl bg-primary-light p-6 max-md:row-start-6 max-lg:row-span-1 max-lg:row-start-4 lg:col-span-1">
@@ -82,15 +77,15 @@ export function TotalSales() {
         </ChartContainer>
       </div>
 
-      <div className="flex flex-col gap-3 text-sm">
+      <div className="flex flex-col gap-3 text-xs">
         {chartData.map((item) => (
           <div key={item.channel} className="flex items-center py-0.5">
-            <div className="flex flex-1 items-center gap-1.5">
+            <div className="flex flex-1 items-center gap-1.5 overflow-hidden">
               <div
                 className="size-1.5 shrink-0 rounded-full"
                 style={{ backgroundColor: item.fill }}
               />
-              <span>{item.channel}</span>
+              <span className="truncate">{item.channel}</span>
             </div>
 
             <p>{formatCurrency(item.sales)}</p>
