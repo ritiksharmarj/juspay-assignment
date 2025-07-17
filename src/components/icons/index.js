@@ -19,7 +19,7 @@ export { default as IdentificationBadgeIcon } from "./identification-badge";
 export { default as IdentificationCardIcon } from "./identification-card";
 export { default as MoonIcon } from "./moon";
 export { default as MoreHorizontalIcon } from "./more-horizontal";
-export { default as NotebookIcon } from "./Notebook";
+export { default as NotebookIcon } from "./notebook";
 export { default as SearchIcon } from "./Search";
 export { default as ShoppingBagOpenIcon } from "./shopping-bag-open";
 export { default as SidebarIcon } from "./sidebar";
