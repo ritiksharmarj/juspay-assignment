@@ -35,8 +35,8 @@ const dashboardsData = [
     icon: ShoppingBagOpenIcon,
     subMenu: [
       {
-        title: "Item One",
-        route: "/item-one",
+        title: "Order List",
+        route: "/order-list",
       },
       {
         title: "Item Two",
