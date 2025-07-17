@@ -4,7 +4,7 @@
       "id": 1,
       "user": {
         "name": "User 1",
-        "avatar": "/src/assets/images/avatars/user-1.png"
+        "avatar": "/images/avatars/user-1.png"
       },
       "action": "You have a bug that needs to be fixed.",
       "timestamp": "Just now"
@@ -13,7 +13,7 @@
       "id": 2,
       "user": {
         "name": "User 2",
-        "avatar": "/src/assets/images/avatars/user-2.png"
+        "avatar": "/images/avatars/user-2.png"
       },
       "action": "Released a new version",
       "timestamp": "59 minutes ago"
@@ -22,7 +22,7 @@
       "id": 3,
       "user": {
         "name": "User 3",
-        "avatar": "/src/assets/images/avatars/user-3.png"
+        "avatar": "/images/avatars/user-3.png"
       },
       "action": "Submitted a bug",
       "timestamp": "12 hours ago"
@@ -31,7 +31,7 @@
       "id": 4,
       "user": {
         "name": "User 4",
-        "avatar": "/src/assets/images/avatars/user-4.png"
+        "avatar": "/images/avatars/user-4.png"
       },
       "action": "Modified A data in Page X",
       "timestamp": "Today, 11:59 AM"
@@ -40,7 +40,7 @@
       "id": 5,
       "user": {
         "name": "User 5",
-        "avatar": "/src/assets/images/avatars/user-5.png"
+        "avatar": "/images/avatars/user-5.png"
       },
       "action": "Deleted a page in Project X",
       "timestamp": "Feb 2, 2023"
@@ -50,32 +50,32 @@
     {
       "id": 1,
       "name": "Natali Craig",
-      "avatar": "/src/assets/images/contacts/natali-craig.png"
+      "avatar": "/images/contacts/natali-craig.png"
     },
     {
       "id": 2,
       "name": "Drew Cano",
-      "avatar": "/src/assets/images/contacts/drew-cano.png"
+      "avatar": "/images/contacts/drew-cano.png"
     },
     {
       "id": 3,
       "name": "Orlando Diggs",
-      "avatar": "/src/assets/images/contacts/orlando-diggs.png"
+      "avatar": "/images/contacts/orlando-diggs.png"
     },
     {
       "id": 4,
       "name": "Andi Lane",
-      "avatar": "/src/assets/images/contacts/andi-lane.png"
+      "avatar": "/images/contacts/andi-lane.png"
     },
     {
       "id": 5,
       "name": "Kate Morrison",
-      "avatar": "/src/assets/images/contacts/kate-morrison.png"
+      "avatar": "/images/contacts/kate-morrison.png"
     },
     {
       "id": 6,
       "name": "Koray Okumus",
-      "avatar": "/src/assets/images/contacts/koray-okumus.png"
+      "avatar": "/images/contacts/koray-okumus.png"
     }
   ],
   "notifications": [
@@ -146,7 +146,7 @@
       "orderId": "CM9801",
       "user": {
         "name": "Natali Craig",
-        "avatar": "/src/assets/images/contacts/natali-craig.png"
+        "avatar": "/images/contacts/natali-craig.png"
       },
       "project": "Landing Page",
       "address": "Meadow Lane Oakland",
@@ -158,7 +158,7 @@
       "orderId": "CM9802",
       "user": {
         "name": "Kate Morrison",
-        "avatar": "/src/assets/images/contacts/kate-morrison.png"
+        "avatar": "/images/contacts/kate-morrison.png"
       },
       "project": "CRM Admin pages",
       "address": "Larry San Francisco",
@@ -170,7 +170,7 @@
       "orderId": "CM9803",
       "user": {
         "name": "Drew Cano",
-        "avatar": "/src/assets/images/contacts/drew-cano.png"
+        "avatar": "/images/contacts/drew-cano.png"
       },
       "project": "Client Project",
       "address": "Bagwell Avenue Ocala",
@@ -182,7 +182,7 @@
       "orderId": "CM9804",
       "user": {
         "name": "Orlando Diggs",
-        "avatar": "/src/assets/images/contacts/orlando-diggs.png"
+        "avatar": "/images/contacts/orlando-diggs.png"
       },
       "project": "Admin Dashboard",
       "address": "Washburn Baton Rouge",
@@ -194,7 +194,7 @@
       "orderId": "CM9805",
       "user": {
         "name": "Andi Lane",
-        "avatar": "/src/assets/images/contacts/andi-lane.png"
+        "avatar": "/images/contacts/andi-lane.png"
       },
       "project": "App Landing Page",
       "address": "Nest Lane Olivette",
@@ -206,7 +206,7 @@
       "orderId": "CM9801",
       "user": {
         "name": "Natali Craig",
-        "avatar": "/src/assets/images/contacts/natali-craig.png"
+        "avatar": "/images/contacts/natali-craig.png"
       },
       "project": "Landing Page",
       "address": "Meadow Lane Oakland",
@@ -218,7 +218,7 @@
       "orderId": "CM9802",
       "user": {
         "name": "Kate Morrison",
-        "avatar": "/src/assets/images/contacts/kate-morrison.png"
+        "avatar": "/images/contacts/kate-morrison.png"
       },
       "project": "CRM Admin pages",
       "address": "Larry San Francisco",
@@ -230,7 +230,7 @@
       "orderId": "CM9803",
       "user": {
         "name": "Drew Cano",
-        "avatar": "/src/assets/images/contacts/drew-cano.png"
+        "avatar": "/images/contacts/drew-cano.png"
       },
       "project": "Client Project",
       "address": "Bagwell Avenue Ocala",
@@ -242,7 +242,7 @@
       "orderId": "CM9804",
       "user": {
         "name": "Orlando Diggs",
-        "avatar": "/src/assets/images/contacts/orlando-diggs.png"
+        "avatar": "/images/contacts/orlando-diggs.png"
       },
       "project": "Admin Dashboard",
       "address": "Washburn Baton Rouge",
@@ -254,7 +254,7 @@
       "orderId": "CM9805",
       "user": {
         "name": "Andi Lane",
-        "avatar": "/src/assets/images/contacts/andi-lane.png"
+        "avatar": "/images/contacts/andi-lane.png"
       },
       "project": "App Landing Page",
       "address": "Nest Lane Olivette",
