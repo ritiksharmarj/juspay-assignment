@@ -1,8 +1,12 @@
 import * as React from "react";
 import {
+  AddIcon,
+  ArrowsDownUpIcon,
   CalendarBlankIcon,
   ClipboardTextIcon,
+  FunnelSimpleIcon,
   MoreHorizontalIcon,
+  SearchIcon,
 } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -14,6 +18,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
 import {
   Pagination,
   PaginationContent,
@@ -65,6 +70,30 @@ export default function OrderListPage() {
   return (
     <div className="p-4 md:p-7">
       <div className="mb-4 px-2 py-1 font-semibold text-sm">Order List</div>
+
+      <div className="mb-3 flex h-11 items-center gap-2 rounded-lg bg-primary-light px-2">
+        <div className="flex grow items-center gap-2">
+          <Button variant="ghost" size="icon">
+            <AddIcon />
+          </Button>
+          <Button variant="ghost" size="icon">
+            <FunnelSimpleIcon />
+          </Button>
+          <Button variant="ghost" size="icon">
+            <ArrowsDownUpIcon />
+          </Button>
+        </div>
+
+        <div>
+          <Input
+            type="text"
+            variant="white"
+            placeholder="Search"
+            prefix={<SearchIcon />}
+            className="w-[160px]"
+          />
+        </div>
+      </div>
 
       <OrderTable orders={orders} />
     </div>
