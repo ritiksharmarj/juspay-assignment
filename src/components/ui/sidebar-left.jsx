@@ -195,14 +195,25 @@ const pagesData = [
 ];
 
 function SidebarSubMenuItem({ subNavItem, ...props }) {
+  const pathname = useLocation().pathname;
+  const isActive = pathname === subNavItem.route;
+
   return (
     <NavLink
       to={subNavItem.route}
       className={cn(
         "relative flex h-7 cursor-pointer items-center gap-1 whitespace-nowrap rounded-lg py-1 pr-2 pl-13 text-sm transition-colors hover:bg-foreground/5",
+        isActive && "bg-foreground/5",
       )}
       {...props}
     >
+      <div
+        className={cn(
+          "absolute left-0 h-4 w-1 rounded-full bg-primary-brand opacity-0 transition-opacity",
+          isActive && "opacity-100",
+        )}
+      />
+
       {subNavItem.title}
     </NavLink>
   );
