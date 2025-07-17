@@ -1,5 +1,6 @@
 import { NavLink, useLocation } from "react-router";
 import ByeWind from "@/assets/images/bye-wind.png";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
 import {
   ArrowLineRightIcon,
@@ -194,13 +195,16 @@ const pagesData = [
   },
 ];
 
-function SidebarSubMenuItem({ subNavItem, ...props }) {
+function SidebarSubMenuItem({ subNavItem, toggleSidebar, ...props }) {
   const pathname = useLocation().pathname;
+  const isMobile = useIsMobile();
+
   const isActive = pathname === subNavItem.route;
 
   return (
     <NavLink
       to={subNavItem.route}
+      onClick={isMobile && toggleSidebar}
       className={cn(
         "relative flex h-7 cursor-pointer items-center gap-1 whitespace-nowrap rounded-lg py-1 pr-2 pl-13 text-sm transition-colors hover:bg-foreground/5",
         isActive && "bg-foreground/5",
@@ -223,15 +227,18 @@ function SidebarItem({
   navItem,
   isCollapsible = false,
   isOpen = false,
+  toggleSidebar,
   ...props
 }) {
   const pathname = useLocation().pathname;
+  const isMobile = useIsMobile();
 
   const Comp = isCollapsible ? "div" : NavLink;
   const isActive = pathname === navItem.route;
 
   if (!isCollapsible) {
     props.to = navItem.route;
+    props.onClick = isMobile && toggleSidebar;
   }
 
   return (
@@ -265,7 +272,7 @@ function SidebarItem({
   );
 }
 
-function CollapsibleSidebarItem({ navItem }) {
+function CollapsibleSidebarItem({ navItem, toggleSidebar }) {
   const { isOpen } = useCollapsible();
 
   return (
@@ -279,6 +286,7 @@ function CollapsibleSidebarItem({ navItem }) {
             <SidebarSubMenuItem
               key={subNavItem.title}
               subNavItem={subNavItem}
+              toggleSidebar={toggleSidebar}
             />
           ))}
         </div>
@@ -353,12 +361,21 @@ export function SidebarLeft({ isCollapsible, toggleSidebar }) {
               if (isSubMenuExists) {
                 return (
                   <Collapsible key={item.title}>
-                    <CollapsibleSidebarItem navItem={item} />
+                    <CollapsibleSidebarItem
+                      navItem={item}
+                      toggleSidebar={toggleSidebar}
+                    />
                   </Collapsible>
                 );
               }
 
-              return <SidebarItem key={item.title} navItem={item} />;
+              return (
+                <SidebarItem
+                  key={item.title}
+                  navItem={item}
+                  toggleSidebar={toggleSidebar}
+                />
+              );
             })}
           </div>
 
