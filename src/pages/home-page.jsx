@@ -1,6 +1,7 @@
 import { Metrics } from "@/components/home/metrics";
 import { ProjectionsActualsChart } from "@/components/home/projections-actuals-chart";
 import { RevenueChart } from "@/components/home/revenue-chart";
+import { RevenueLocationChart } from "@/components/home/revenue-location-chart";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
         <Metrics />
         <ProjectionsActualsChart />
         <RevenueChart />
+        <RevenueLocationChart />
       </div>
     </div>
   );
