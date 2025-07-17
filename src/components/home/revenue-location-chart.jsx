@@ -95,8 +95,8 @@ const MapComp = React.memo(({ locations }) => {
         {locations.map(({ location, coordinates }) => (
           <Marker key={location} coordinates={coordinates}>
             <circle
-              r={10}
-              className="fill-primary-brand stroke-1 stroke-background"
+              r={15}
+              className="fill-primary-brand stroke-3 stroke-white"
             />
           </Marker>
         ))}
