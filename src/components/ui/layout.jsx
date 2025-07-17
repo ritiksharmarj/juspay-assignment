@@ -5,23 +5,23 @@ import { SidebarLeft } from "./sidebar-left";
 import { SidebarRight } from "./sidebar-right";
 
 export function Layout() {
-  const [isSidebarLeftOpen, setIsSidebarLeftOpen] = React.useState(false);
-  const [isSidebarRightOpen, setIsSidebarRightOpen] = React.useState(false);
+  const [collapsedLeft, setCollapsedLeft] = React.useState(false);
+  const [collapsedRight, setCollapsedRight] = React.useState(false);
 
   const toggleSidebarLeft = React.useCallback(
-    () => setIsSidebarLeftOpen((prevState) => !prevState),
+    () => setCollapsedLeft((prevState) => !prevState),
     [],
   );
 
   const toggleSidebarRight = React.useCallback(
-    () => setIsSidebarRightOpen((prevState) => !prevState),
+    () => setCollapsedRight((prevState) => !prevState),
     [],
   );
 
   return (
     <div className="flex min-h-dvh w-full">
       <SidebarLeft
-        isSidebarLeftOpen={isSidebarLeftOpen}
+        isSidebarLeftOpen={collapsedLeft}
         toggleSidebar={toggleSidebarLeft}
       />
 
@@ -34,7 +34,7 @@ export function Layout() {
       </main>
 
       <SidebarRight
-        isSidebarRightOpen={isSidebarRightOpen}
+        isSidebarRightOpen={collapsedRight}
         toggleSidebar={toggleSidebarRight}
       />
     </div>

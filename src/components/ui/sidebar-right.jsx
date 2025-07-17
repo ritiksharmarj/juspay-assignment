@@ -18,11 +18,11 @@ const notificationConfig = {
   },
 };
 
-export function SidebarRight({ isSidebarRightOpen, toggleSidebar }) {
+export function SidebarRight({ isCollapsible, toggleSidebar }) {
   return (
     <Sidebar
       side="right"
-      isCollapsible={isSidebarRightOpen}
+      isCollapsible={isCollapsible}
       sidebarWidthDesktop="280px"
       toggleSidebar={toggleSidebar}
     >

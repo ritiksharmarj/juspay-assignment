@@ -276,10 +276,10 @@ function CollapsibleSidebarItem({ navItem }) {
   );
 }
 
-export function SidebarLeft({ isSidebarLeftOpen, toggleSidebar }) {
+export function SidebarLeft({ isCollapsible, toggleSidebar }) {
   return (
     <Sidebar
-      isCollapsible={isSidebarLeftOpen}
+      isCollapsible={isCollapsible}
       sidebarWidthDesktop="212px"
       toggleSidebar={toggleSidebar}
     >
