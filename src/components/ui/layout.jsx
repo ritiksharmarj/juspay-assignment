@@ -20,7 +20,10 @@ export function Layout() {
 
   return (
     <div className="flex min-h-dvh w-full">
-      <SidebarLeft isSidebarLeftOpen={isSidebarLeftOpen} />
+      <SidebarLeft
+        isSidebarLeftOpen={isSidebarLeftOpen}
+        toggleSidebar={toggleSidebarLeft}
+      />
 
       <main className="relative flex h-dvh w-full flex-1 flex-col overflow-y-auto">
         <Header
@@ -30,7 +33,10 @@ export function Layout() {
         <Outlet />
       </main>
 
-      <SidebarRight isSidebarRightOpen={isSidebarRightOpen} />
+      <SidebarRight
+        isSidebarRightOpen={isSidebarRightOpen}
+        toggleSidebar={toggleSidebarRight}
+      />
     </div>
   );
 }

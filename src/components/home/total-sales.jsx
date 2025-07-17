@@ -47,7 +47,7 @@ export function TotalSales() {
     }).format(value);
 
   return (
-    <div className="col-span-1 flex flex-col gap-4 rounded-2xl bg-primary-light p-6">
+    <div className="col-span-full flex flex-col gap-4 rounded-2xl bg-primary-light p-6 md:col-span-1">
       <p className="font-semibold text-sm">Total Sales</p>
 
       <div className="w-full">

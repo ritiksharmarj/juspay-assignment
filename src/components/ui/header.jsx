@@ -19,18 +19,18 @@ import { Input } from "./input";
 
 export function Header({ toggleSidebarLeft, toggleSidebarRight }) {
   return (
-    <header className="sticky top-0 z-20 flex h-17 shrink-0 items-center border-foreground/10 border-b bg-background px-7">
+    <header className="sticky top-0 z-20 flex h-17 shrink-0 items-center overflow-hidden border-foreground/10 border-b bg-background px-4 md:px-7">
       <div className="flex items-center gap-2">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" onClick={toggleSidebarLeft}>
             <SidebarIcon />
           </Button>
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" className="max-sm:hidden">
             <StarIcon />
           </Button>
         </div>
 
-        <Breadcrumb>
+        <Breadcrumb className="max-sm:hidden">
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink>Dashboards</BreadcrumbLink>
@@ -54,10 +54,10 @@ export function Header({ toggleSidebarLeft, toggleSidebarRight }) {
 
         <div className="flex items-center gap-2">
           <ToggleTheme />
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" className="max-sm:hidden">
             <ClockCounterClockwiseIcon />
           </Button>
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" className="max-sm:hidden">
             <BellIcon />
           </Button>
           <Button variant="ghost" size="icon" onClick={toggleSidebarRight}>

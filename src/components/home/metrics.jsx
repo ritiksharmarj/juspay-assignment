@@ -57,7 +57,7 @@ export function Metrics() {
   }, []);
 
   return (
-    <div className="col-span-2 grid grid-cols-2 gap-7">
+    <div className="col-span-full grid grid-cols-1 gap-7 md:col-span-2 md:grid-cols-2">
       {currentMetrics.map((metric) => (
         <MetricCard key={metric.id} metric={metric} />
       ))}

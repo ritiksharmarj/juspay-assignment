@@ -7,10 +7,10 @@ import { TotalSales } from "@/components/home/total-sales";
 
 export default function HomePage() {
   return (
-    <div className="p-7">
+    <div className="p-4 md:p-7">
       <div className="mb-4 px-2 py-1 font-semibold text-sm">eCommerce</div>
 
-      <div className="grid grid-cols-4 gap-7">
+      <div className="grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-4">
         <Metrics />
         <ProjectionsActualsChart />
         <RevenueChart />
