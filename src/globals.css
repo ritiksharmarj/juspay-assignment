@@ -18,7 +18,9 @@
   --color-secondary-indigo: var(--secondary-indigo);
   --color-secondary-blue: var(--secondary-blue);
   --color-secondary-mint: var(--secondary-mint);
+  --color-secondary-green: var(--secondary-green);
   --color-secondary-cyan: var(--secondary-cyan);
+  --color-secondary-yellow: var(--secondary-yellow);
 
   --color-border: var(--border);
   --color-input: var(--input);
@@ -44,7 +46,9 @@
   --secondary-indigo: hsl(231, 94%, 79%);
   --secondary-blue: hsl(202, 100%, 85%);
   --secondary-mint: hsl(124, 59%, 83%);
+  --secondary-green: hsl(158, 54%, 76%);
   --secondary-cyan: hsl(205, 40%, 76%);
+  --secondary-yellow: hsl(47, 100%, 80%);
 
   --border: hsl(0, 0%, 11%);
   --input: hsl(0, 0%, 11%);
@@ -70,7 +74,9 @@
   --secondary-indigo: hsl(231, 94%, 79%);
   --secondary-blue: hsl(202, 100%, 85%);
   --secondary-mint: hsl(124, 59%, 83%);
+  --secondary-green: hsl(158, 54%, 76%);
   --secondary-cyan: hsl(205, 40%, 76%);
+  --secondary-yellow: hsl(47, 100%, 80%);
 
   --border: hsl(0, 0%, 100%);
   --input: hsl(0, 0%, 100%);
