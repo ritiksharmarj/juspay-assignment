@@ -337,11 +337,11 @@ export function SidebarLeft({ isCollapsible, toggleSidebar }) {
 
             <TransitionPanel
               activeIndex={activeTabIndex}
-              transition={{ duration: 0.2, ease: "easeInOut" }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
               variants={{
-                enter: { opacity: 0, y: 10, filter: "blur(4px)" },
+                enter: { opacity: 0, y: 10, filter: "blur(2px)" },
                 center: { opacity: 1, y: 0, filter: "blur(0px)" },
-                exit: { opacity: 0, y: -10, filter: "blur(4px)" },
+                exit: { opacity: 0, y: -10, filter: "blur(2px)" },
               }}
               className="overflow-hidden"
             >
