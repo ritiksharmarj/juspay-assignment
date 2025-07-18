@@ -5,6 +5,7 @@ import {
   Geography,
   Marker,
 } from "react-simple-maps";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
@@ -93,12 +94,19 @@ const MapComp = React.memo(({ locations }) => {
           }
         </Geographies>
         {locations.map(({ location, coordinates }) => (
-          <Marker key={location} coordinates={coordinates}>
-            <circle
-              r={15}
-              className="fill-primary-brand stroke-3 stroke-white"
-            />
-          </Marker>
+          <Tooltip key={location}>
+            <TooltipTrigger asChild>
+              <Marker coordinates={coordinates}>
+                <circle
+                  r={15}
+                  className="fill-primary-brand stroke-3 stroke-white"
+                />
+              </Marker>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>{location}</p>
+            </TooltipContent>
+          </Tooltip>
         ))}
       </ComposableMap>
     </div>
