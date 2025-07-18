@@ -25,7 +25,7 @@ const notificationConfig = {
 function Comp({ title, className, children, ...props }) {
   return (
     <div className={cn("flex flex-col gap-2 px-5", className)} {...props}>
-      <div className="px-1 py-2 font-semibold text-sm">Notifications</div>
+      <div className="px-1 py-2 font-semibold text-sm">{title}</div>
 
       {children}
     </div>
