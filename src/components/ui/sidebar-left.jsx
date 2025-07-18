@@ -1,6 +1,9 @@
+import * as React from "react";
 import { NavLink, useLocation } from "react-router";
 import ByeWind from "@/assets/images/bye-wind.png";
+import { TransitionPanel } from "@/components/core/transition-panel";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { TABS_DATA } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import {
   ArrowLineRightIcon,
@@ -297,6 +300,7 @@ function CollapsibleSidebarItem({ navItem, toggleSidebar }) {
 
 export function SidebarLeft({ isCollapsible, toggleSidebar }) {
   const { pathname } = useLocation();
+  const [activeTabIndex, setActiveTabIndex] = React.useState(0);
 
   return (
     <Sidebar
@@ -317,7 +321,51 @@ export function SidebarLeft({ isCollapsible, toggleSidebar }) {
         </div>
 
         <div className="px-4">
-          <Tabs defaultValue="favorites">
+          <Tabs
+            defaultValue={TABS_DATA[0].value}
+            onValueChange={(value) =>
+              setActiveTabIndex(TABS_DATA.findIndex((t) => t.value === value))
+            }
+          >
+            <TabsList>
+              {TABS_DATA.map((tab) => (
+                <TabsTrigger key={tab.value} value={tab.value}>
+                  {tab.title}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+
+            <TransitionPanel
+              activeIndex={activeTabIndex}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              variants={{
+                enter: { opacity: 0, y: 10, filter: "blur(4px)" },
+                center: { opacity: 1, y: 0, filter: "blur(0px)" },
+                exit: { opacity: 0, y: -10, filter: "blur(4px)" },
+              }}
+              className="overflow-hidden"
+            >
+              {TABS_DATA.map((tab) => (
+                <TabsContent
+                  key={tab.value}
+                  value={tab.value}
+                  className="flex flex-col gap-1 text-sm"
+                >
+                  {tab.content.map((item) => (
+                    <div
+                      key={item.title}
+                      className="flex h-7 items-center whitespace-nowrap rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5"
+                    >
+                      <div className="mr-[9px] size-1.5 shrink-0 rounded-full bg-foreground/20" />
+                      {item.title}
+                    </div>
+                  ))}
+                </TabsContent>
+              ))}
+            </TransitionPanel>
+          </Tabs>
+
+          {/* <Tabs defaultValue="favorites">
             <TabsList>
               <TabsTrigger value="favorites">Favorites</TabsTrigger>
               <TabsTrigger value="recently">Recently</TabsTrigger>
@@ -348,7 +396,7 @@ export function SidebarLeft({ isCollapsible, toggleSidebar }) {
                 Documents
               </div>
             </TabsContent>
-          </Tabs>
+          </Tabs> */}
         </div>
 
         <div className="flex flex-1 flex-col gap-4 overflow-y-auto px-4 pb-5">
