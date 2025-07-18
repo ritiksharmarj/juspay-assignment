@@ -364,39 +364,6 @@ export function SidebarLeft({ isCollapsible, toggleSidebar }) {
               ))}
             </TransitionPanel>
           </Tabs>
-
-          {/* <Tabs defaultValue="favorites">
-            <TabsList>
-              <TabsTrigger value="favorites">Favorites</TabsTrigger>
-              <TabsTrigger value="recently">Recently</TabsTrigger>
-            </TabsList>
-            <TabsContent
-              value="favorites"
-              className="flex flex-col gap-1 text-sm"
-            >
-              <div className="flex h-7 items-center whitespace-nowrap rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
-                <div className="mr-[9px] size-1.5 shrink-0 rounded-full bg-foreground/20" />
-                Overview
-              </div>
-              <div className="flex h-7 items-center whitespace-nowrap rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
-                <div className="mr-[9px] size-1.5 shrink-0 rounded-full bg-foreground/20" />
-                Projects
-              </div>
-            </TabsContent>
-            <TabsContent
-              value="recently"
-              className="flex flex-col gap-1 text-sm"
-            >
-              <div className="flex h-7 items-center whitespace-nowrap rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
-                <div className="mr-[9px] size-1.5 shrink-0 rounded-full bg-foreground/20" />
-                eCommerce
-              </div>
-              <div className="flex h-7 items-center whitespace-nowrap rounded-lg py-1 pr-2 pl-[13px] hover:bg-foreground/5">
-                <div className="mr-[9px] size-1.5 shrink-0 rounded-full bg-foreground/20" />
-                Documents
-              </div>
-            </TabsContent>
-          </Tabs> */}
         </div>
 
         <div className="flex flex-1 flex-col gap-4 overflow-y-auto px-4 pb-5">
