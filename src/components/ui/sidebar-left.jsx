@@ -196,7 +196,7 @@ const pagesData = [
 ];
 
 function SidebarSubMenuItem({ subNavItem, toggleSidebar, ...props }) {
-  const pathname = useLocation().pathname;
+  const { pathname } = useLocation();
   const isMobile = useIsMobile();
 
   const isActive = pathname === subNavItem.route;
@@ -230,7 +230,7 @@ function SidebarItem({
   toggleSidebar,
   ...props
 }) {
-  const pathname = useLocation().pathname;
+  const { pathname } = useLocation();
   const isMobile = useIsMobile();
 
   const Comp = isCollapsible ? "div" : NavLink;
@@ -296,6 +296,8 @@ function CollapsibleSidebarItem({ navItem, toggleSidebar }) {
 }
 
 export function SidebarLeft({ isCollapsible, toggleSidebar }) {
+  const { pathname } = useLocation();
+
   return (
     <Sidebar
       isCollapsible={isCollapsible}
@@ -359,8 +361,12 @@ export function SidebarLeft({ isCollapsible, toggleSidebar }) {
               const isSubMenuExists = !!item.subMenu && !!item.subMenu.length;
 
               if (isSubMenuExists) {
+                const isSubMenuActive = item.subMenu.some(
+                  (subItem) => subItem.route === pathname,
+                );
+
                 return (
-                  <Collapsible key={item.title}>
+                  <Collapsible key={item.title} defaultOpen={isSubMenuActive}>
                     <CollapsibleSidebarItem
                       navItem={item}
                       toggleSidebar={toggleSidebar}

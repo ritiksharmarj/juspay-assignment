@@ -12,8 +12,8 @@ function useCollapsible() {
   return context;
 }
 
-function Collapsible({ children }) {
-  const [isOpen, setIsOpen] = React.useState(false);
+function Collapsible({ children, defaultOpen = false }) {
+  const [isOpen, setIsOpen] = React.useState(defaultOpen);
 
   const toggle = () => setIsOpen((prev) => !prev);
 
