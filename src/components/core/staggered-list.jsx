@@ -1,27 +1,27 @@
-import { motion } from "motion/react";
+import { motion, stagger } from "motion/react";
 import { cn } from "@/lib/utils";
 
-const listVars = {
+const container = {
   hidden: { opacity: 0 },
-  visible: {
+  show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.05,
+      delayChildren: stagger(0.1),
     },
   },
 };
 
-const itemVars = {
+const item = {
   hidden: { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0 },
+  show: { opacity: 1, y: 0 },
 };
 
 export function StaggeredList({ className, ...motionProps }) {
   return (
     <motion.div
-      variants={listVars}
+      variants={container}
       initial="hidden"
-      animate="visible"
+      animate="show"
       className={cn(className)}
       {...motionProps}
     />
@@ -31,12 +31,8 @@ export function StaggeredList({ className, ...motionProps }) {
 export function StaggeredListItem({ className, ...motionProps }) {
   return (
     <motion.div
-      variants={itemVars}
-      transition={{
-        type: "tween",
-        ease: "easeOut",
-        duration: 0.2,
-      }}
+      variants={item}
+      transition={{ duration: 0.2, ease: "easeOut" }}
       className={cn(className)}
       {...motionProps}
     />
