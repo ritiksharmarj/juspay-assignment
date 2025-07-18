@@ -44,7 +44,7 @@ function DropdownMenuItem({ className, inset, variant = "default", ...props }) {
       data-inset={inset}
       data-variant={variant}
       className={cn(
-        "data-[variant=destructive]:*:[svg]:!text-destructive relative flex cursor-default select-none items-center gap-2 rounded-lg px-2 py-1.5 text-sm outline-hidden focus:bg-foreground/5 focus:text-foreground data-[disabled]:pointer-events-none data-[inset]:pl-8 data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "data-[variant=destructive]:*:[svg]:!text-destructive relative flex cursor-default select-none items-center gap-2 rounded-lg px-2 py-1.5 text-xs outline-hidden focus:bg-foreground/5 focus:text-foreground data-[disabled]:pointer-events-none data-[inset]:pl-8 data-[disabled]:opacity-50 [&_svg:not([class*='size-'])]:size-4 [&_svg:not([class*='text-'])]:text-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className,
       )}
       {...props}
@@ -58,7 +58,7 @@ function DropdownMenuLabel({ className, inset, ...props }) {
       data-slot="dropdown-menu-label"
       data-inset={inset}
       className={cn(
-        "px-2 py-1.5 font-medium text-sm data-[inset]:pl-8",
+        "px-2 py-1.5 font-medium text-xs data-[inset]:pl-8",
         className,
       )}
       {...props}
