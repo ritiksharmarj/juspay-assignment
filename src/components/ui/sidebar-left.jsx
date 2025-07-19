@@ -3,20 +3,9 @@ import { NavLink, useLocation } from "react-router";
 import ByeWind from "@/assets/images/bye-wind.png";
 import { TransitionPanel } from "@/components/core/transition-panel";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { TABS_DATA } from "@/lib/constants";
+import { NAV_DATA, TABS_DATA } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import {
-  ArrowLineRightIcon,
-  BookOpenIcon,
-  ChartPieSliceIcon,
-  ChatsTeardropIcon,
-  FolderNotchIcon,
-  IdentificationBadgeIcon,
-  IdentificationCardIcon,
-  NotebookIcon,
-  ShoppingBagOpenIcon,
-  UsersThreeIcon,
-} from "../icons";
+import { ArrowLineRightIcon } from "../icons";
 import {
   Collapsible,
   CollapsibleContent,
@@ -25,178 +14,6 @@ import {
 } from "./collapsible";
 import { Sidebar } from "./sidebar";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./tabs";
-
-const dashboardsData = [
-  {
-    title: "Default",
-    route: "/",
-    icon: ChartPieSliceIcon,
-    subMenu: [],
-  },
-  {
-    title: "eCommerce",
-    route: "",
-    icon: ShoppingBagOpenIcon,
-    subMenu: [
-      {
-        title: "Order List",
-        route: "/order-list",
-      },
-      {
-        title: "Item Two",
-        route: "/item-two",
-      },
-      {
-        title: "Item Three",
-        route: "/item-three",
-      },
-    ],
-  },
-  {
-    title: "Projects",
-    route: "",
-    icon: FolderNotchIcon,
-    subMenu: [
-      {
-        title: "Item One",
-        route: "/item-one",
-      },
-      {
-        title: "Item Two",
-        route: "/item-two",
-      },
-      {
-        title: "Item Three",
-        route: "/item-three",
-      },
-    ],
-  },
-  {
-    title: "Online Courses",
-    route: "",
-    icon: BookOpenIcon,
-    subMenu: [
-      {
-        title: "Item One",
-        route: "/item-one",
-      },
-      {
-        title: "Item Two",
-        route: "/item-two",
-      },
-      {
-        title: "Item Three",
-        route: "/item-three",
-      },
-    ],
-  },
-];
-
-const pagesData = [
-  {
-    title: "User Profile",
-    route: "",
-    icon: IdentificationBadgeIcon,
-    subMenu: [
-      {
-        title: "Overview",
-        route: "/overview",
-      },
-      {
-        title: "Projects",
-        route: "/projects",
-      },
-      {
-        title: "Campaigns",
-        route: "/campaigns",
-      },
-      {
-        title: "Documents",
-        route: "/documents",
-      },
-      {
-        title: "Followers",
-        route: "/followers",
-      },
-    ],
-  },
-  {
-    title: "Account",
-    route: "",
-    icon: IdentificationCardIcon,
-    subMenu: [
-      {
-        title: "Item One",
-        route: "/item-one",
-      },
-      {
-        title: "Item Two",
-        route: "/item-two",
-      },
-      {
-        title: "Item Three",
-        route: "/item-three",
-      },
-    ],
-  },
-  {
-    title: "Corporate",
-    route: "",
-    icon: UsersThreeIcon,
-    subMenu: [
-      {
-        title: "Item One",
-        route: "/item-one",
-      },
-      {
-        title: "Item Two",
-        route: "/item-two",
-      },
-      {
-        title: "Item Three",
-        route: "/item-three",
-      },
-    ],
-  },
-  {
-    title: "Blog",
-    route: "",
-    icon: NotebookIcon,
-    subMenu: [
-      {
-        title: "Item One",
-        route: "/item-one",
-      },
-      {
-        title: "Item Two",
-        route: "/item-two",
-      },
-      {
-        title: "Item Three",
-        route: "/item-three",
-      },
-    ],
-  },
-  {
-    title: "Social",
-    route: "",
-    icon: ChatsTeardropIcon,
-    subMenu: [
-      {
-        title: "Item One",
-        route: "/item-one",
-      },
-      {
-        title: "Item Two",
-        route: "/item-two",
-      },
-      {
-        title: "Item Three",
-        route: "/item-three",
-      },
-    ],
-  },
-];
 
 function SidebarSubMenuItem({ subNavItem, toggleSidebar, ...props }) {
   const { pathname } = useLocation();
@@ -367,58 +184,40 @@ export function SidebarLeft({ isCollapsible, toggleSidebar }) {
         </div>
 
         <div className="flex flex-1 flex-col gap-4 overflow-y-auto px-4 pb-5">
-          <div className="flex flex-col gap-1">
-            <div className="flex h-7 items-center px-3 py-1 text-foreground/40 text-sm">
-              Dashboards
-            </div>
+          {NAV_DATA.map((nav) => (
+            <div key={nav.title} className="flex flex-col gap-1">
+              <div className="flex h-7 items-center px-3 py-1 text-foreground/40 text-sm">
+                {nav.title}
+              </div>
 
-            {dashboardsData.map((item) => {
-              const isSubMenuExists = !!item.subMenu && !!item.subMenu.length;
+              {nav.navItems.map((item) => {
+                const isSubMenuExists = !!item.subMenu && !!item.subMenu.length;
 
-              if (isSubMenuExists) {
-                const isSubMenuActive = item.subMenu.some(
-                  (subItem) => subItem.route === pathname,
-                );
+                if (isSubMenuExists) {
+                  const isSubMenuActive = item.subMenu.some(
+                    (subItem) => subItem.route === pathname,
+                  );
+
+                  return (
+                    <Collapsible key={item.title} defaultOpen={isSubMenuActive}>
+                      <CollapsibleSidebarItem
+                        navItem={item}
+                        toggleSidebar={toggleSidebar}
+                      />
+                    </Collapsible>
+                  );
+                }
 
                 return (
-                  <Collapsible key={item.title} defaultOpen={isSubMenuActive}>
-                    <CollapsibleSidebarItem
-                      navItem={item}
-                      toggleSidebar={toggleSidebar}
-                    />
-                  </Collapsible>
+                  <SidebarItem
+                    key={item.title}
+                    navItem={item}
+                    toggleSidebar={toggleSidebar}
+                  />
                 );
-              }
-
-              return (
-                <SidebarItem
-                  key={item.title}
-                  navItem={item}
-                  toggleSidebar={toggleSidebar}
-                />
-              );
-            })}
-          </div>
-
-          <div className="flex flex-col gap-1">
-            <div className="flex h-7 items-center px-3 py-1 text-foreground/40 text-sm">
-              Pages
+              })}
             </div>
-
-            {pagesData.map((item) => {
-              const isSubMenuExists = !!item.subMenu && !!item.subMenu.length;
-
-              if (isSubMenuExists) {
-                return (
-                  <Collapsible key={item.title}>
-                    <CollapsibleSidebarItem navItem={item} />
-                  </Collapsible>
-                );
-              }
-
-              return <SidebarItem key={item.title} navItem={item} />;
-            })}
-          </div>
+          ))}
         </div>
       </div>
     </Sidebar>
