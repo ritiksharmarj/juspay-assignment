@@ -48,7 +48,7 @@ export function TotalSales() {
       <div className="w-full">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-w-46 lg:max-h-30"
+          className="mx-auto aspect-square max-h-46 lg:max-h-30"
         >
           <PieChart>
             <ChartTooltip
